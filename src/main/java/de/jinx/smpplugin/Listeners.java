@@ -16,7 +16,7 @@ public class Listeners implements Listener {
     @EventHandler
     public static void onPlayerJoin(PlayerJoinEvent e){
         ScoreboardHandler.createScoreboard(e.getPlayer());
-        e.getPlayer().sendMessage(SmpPlugin.PREFIX+"Type /vote {name} for a Name of the SMP! \n"+SmpPlugin.PREFIX+"And /votelist for all suggested Names");
+        e.getPlayer().sendMessage(SmpPlugin.PREFIX+"Go to our Discord to vote for a SMP Name!");
         e.setJoinMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has joined this beatiful SMP :)");
     }
 
