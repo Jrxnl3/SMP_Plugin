@@ -5,6 +5,4 @@ api-version: 1.17
 authors: [ Jinx_Dev ]
 
 commands:
-   vote:
-   votelist:
    broadcast:

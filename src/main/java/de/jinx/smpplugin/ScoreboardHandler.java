@@ -12,15 +12,16 @@ public class ScoreboardHandler {
 
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
 
-        Objective obj = scoreboard.registerNewObjective("test", "dummy", "§6/vote for cool SMP Name :)");
+        Objective obj = scoreboard.registerNewObjective("test", "dummy", "§6Insert name :)");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-        obj.getScore("").setScore(9);
-        obj.getScore("§6§lPlayer:").setScore(8);
-        obj.getScore("§a" + p.getName()).setScore(7);
-        obj.getScore(" ").setScore(6);
-        obj.getScore("§6Commands").setScore(5);
-        obj.getScore("§2/vote").setScore(4);
-        obj.getScore("§2/votelist").setScore(3);
+        obj.getScore("").setScore(10);
+        obj.getScore("§6§lPlayer:").setScore(9);
+        obj.getScore("§a" + p.getName()).setScore(8);
+        obj.getScore(" ").setScore(7);
+        obj.getScore("§Voted Names:").setScore(6);
+        obj.getScore("§2Elemental(SMP)").setScore(5);
+        obj.getScore("§2SMPain").setScore(4);
+        obj.getScore("§2Ultimate-SMP").setScore(3);
         obj.getScore("   ").setScore(2);
         obj.getScore("§dDiscord:").setScore(1);
         obj.getScore("§adiscord.gg/wUUKbk7eaz").setScore(0);

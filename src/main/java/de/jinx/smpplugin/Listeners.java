@@ -2,16 +2,14 @@ package de.jinx.smpplugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.World;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
-import java.util.UUID;
 
 public class Listeners implements Listener {
 
@@ -20,6 +18,12 @@ public class Listeners implements Listener {
         ScoreboardHandler.createScoreboard(e.getPlayer());
         e.getPlayer().sendMessage(SmpPlugin.PREFIX+"Type /vote {name} for a Name of the SMP! \n"+SmpPlugin.PREFIX+"And /votelist for all suggested Names");
         e.setJoinMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has joined this beatiful SMP :)");
+    }
+
+    @EventHandler
+    public static void onPlayerLeave(PlayerQuitEvent e){
+        ScoreboardHandler.createScoreboard(e.getPlayer());
+        e.setQuitMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has quitted this cool SMP :(");
     }
 
     @EventHandler
