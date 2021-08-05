@@ -18,12 +18,12 @@ public class ScoreboardHandler {
         obj.getScore("§6§lPlayer:").setScore(9);
         obj.getScore("§a" + p.getName()).setScore(8);
         obj.getScore(" ").setScore(7);
-        obj.getScore("§Voted Names:").setScore(6);
+        obj.getScore("§6§lVoted Names:").setScore(6);
         obj.getScore("§2Elemental(SMP)").setScore(5);
         obj.getScore("§2SMPain").setScore(4);
         obj.getScore("§2Ultimate-SMP").setScore(3);
         obj.getScore("   ").setScore(2);
-        obj.getScore("§dDiscord:").setScore(1);
+        obj.getScore("§d§lDiscord:").setScore(1);
         obj.getScore("§adiscord.gg/wUUKbk7eaz").setScore(0);
 
         p.setScoreboard(scoreboard);
