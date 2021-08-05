@@ -20,6 +20,7 @@ public final class SmpPlugin extends JavaPlugin {
         pl.registerEvents(new Listeners(),this);
 
         this.getCommand("broadcast").setExecutor(new Commands());
+        this.getCommand("rename").setExecutor(new Commands());
     }
 
     @Override

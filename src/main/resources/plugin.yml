@@ -6,3 +6,4 @@ authors: [ Jinx_Dev ]
 
 commands:
    broadcast:
+   rename:
