@@ -19,7 +19,7 @@ public class ScoreboardHandler {
         obj.getScore("§a" + p.getName()).setScore(4);
         obj.getScore(" ").setScore(3);
         obj.getScore("§5§lEnd:").setScore(3);
-        obj.getScore("§e15 o'clock 07.08.").setScore(3);
+        obj.getScore("§eabout 15 o'clock 07.08.").setScore(3);
         obj.getScore("  ").setScore(2);
         obj.getScore("§d§lDiscord:").setScore(1);
         obj.getScore("§adiscord.gg/wUUKbk7eaz").setScore(0);

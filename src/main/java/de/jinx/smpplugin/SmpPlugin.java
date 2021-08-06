@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.SmokingRecipe;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,7 +20,6 @@ public final class SmpPlugin extends JavaPlugin {
         plugin = this;
 
 
-        System.out.println("SMPain has loaded!");
         PluginManager pl = Bukkit.getPluginManager();
 
         pl.registerEvents(new Listeners(),this);
@@ -31,8 +31,17 @@ public final class SmpPlugin extends JavaPlugin {
         FurnaceRecipe furnaceRecipe = new FurnaceRecipe(NamespacedKey.fromString("smpplugin"),new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH,1,20*30);
         SmokingRecipe leatherSmoker = new SmokingRecipe(NamespacedKey.fromString("smpplugin"),new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH,1,20*20);
 
+        ItemStack itemString = new ItemStack(Material.STRING);
+        itemString.setAmount(3);
+        
+        ShapelessRecipe woolToString = new ShapelessRecipe(NamespacedKey.fromString("smpplugin"),itemString);
+
+        woolToString.addIngredient(Material.WHITE_WOOL);
+
         getServer().addRecipe(furnaceRecipe);
         getServer().addRecipe(leatherSmoker);
+        getServer().addRecipe(woolToString);
+        System.out.println("SMPain has loaded!");
     }
 
     @Override

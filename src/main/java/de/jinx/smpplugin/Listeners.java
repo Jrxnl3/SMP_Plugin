@@ -36,26 +36,4 @@ public class Listeners implements Listener {
         p.sendMessage("§cYou died at X:"+p.getLocation().getBlockX() + " Y: "+p.getLocation().getBlockY()+ " Z: "+p.getLocation().getBlockZ());
 
     }
-
-    @EventHandler
-    public void onEntityExplode(EntityExplodeEvent event) {
-
-            int p1HouseX = 324;
-            int p2xHouseX = 361;
-            int p1HouseZ = 342;
-            int p2HouseZ = 397;
-
-            int explodedX = event.getLocation().getBlockX();
-            int explodedZ = event.getLocation().getBlockZ();
-
-            if(event.getEntity().getWorld().getEnvironment().equals(World.Environment.NORMAL)) {
-                if (explodedX > p1HouseX && explodedX < p2xHouseX) {
-                    if (explodedZ > p1HouseZ && explodedZ < p2HouseZ) {
-                        Bukkit.getPlayer("Jinx_Dev").sendMessage("An Creeper exploded at " + event.getLocation().getBlockX() + " Y: " + event.getLocation().getBlockY() + " Z: " + event.getLocation().getBlockZ());
-                        event.setCancelled(true);
-                    }
-                }
-            }
-    }
-
 }
