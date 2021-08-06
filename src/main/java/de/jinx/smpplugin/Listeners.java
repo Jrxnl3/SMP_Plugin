@@ -16,13 +16,13 @@ public class Listeners implements Listener {
     @EventHandler
     public static void onPlayerJoin(PlayerJoinEvent e){
         ScoreboardHandler.createScoreboard(e.getPlayer());
-        e.setJoinMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has joined §2SM§aPain§6 :)");
+        e.setJoinMessage(SmpPlugin.PREFIX +"§b" +e.getPlayer().getName() + " §6has joined §2SM§aPain§6 :)");
     }
 
     @EventHandler
     public static void onPlayerLeave(PlayerQuitEvent e){
         ScoreboardHandler.createScoreboard(e.getPlayer());
-        e.setQuitMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has quitted §2SM§aPain§6 :(");
+        e.setQuitMessage(SmpPlugin.PREFIX + "§b"+e.getPlayer().getName() + "§6 has quitted §2SM§aPain§6 :(");
     }
 
     @EventHandler

@@ -14,11 +14,11 @@ public class ScoreboardHandler {
 
         Objective obj = scoreboard.registerNewObjective("test", "dummy", "§2SM§aPain§6");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-        obj.getScore("").setScore(6);
-        obj.getScore("§6§lPlayer:").setScore(5);
-        obj.getScore("§a" + p.getName()).setScore(4);
-        obj.getScore(" ").setScore(3);
-        obj.getScore("§5§lEnd:").setScore(3);
+        obj.getScore("").setScore(8);
+        obj.getScore("§6§lPlayer:").setScore(7);
+        obj.getScore("§a" + p.getName()).setScore(6);
+        obj.getScore(" ").setScore(5);
+        obj.getScore("§5§lEnd:").setScore(4);
         obj.getScore("§eabout 15 o'clock 07.08.").setScore(3);
         obj.getScore("  ").setScore(2);
         obj.getScore("§d§lDiscord:").setScore(1);
