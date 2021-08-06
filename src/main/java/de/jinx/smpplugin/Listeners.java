@@ -16,21 +16,25 @@ public class Listeners implements Listener {
     @EventHandler
     public static void onPlayerJoin(PlayerJoinEvent e){
         ScoreboardHandler.createScoreboard(e.getPlayer());
-        e.getPlayer().sendMessage(SmpPlugin.PREFIX+"Go to our Discord to vote for a SMP Name!");
-        e.setJoinMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has joined this beatiful SMP :)");
+        e.setJoinMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has joined §2SM§aPain§6 :)");
     }
 
     @EventHandler
     public static void onPlayerLeave(PlayerQuitEvent e){
         ScoreboardHandler.createScoreboard(e.getPlayer());
-        e.setQuitMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has quitted this cool SMP :(");
+        e.setQuitMessage(SmpPlugin.PREFIX + e.getPlayer().getName() + " has quitted §2SM§aPain§6 :(");
     }
 
     @EventHandler
     public static void onPlayerDeath(PlayerDeathEvent e){
         Player p = e.getEntity();
+
+        System.out.println(e.getDeathMessage());
+        System.out.println("Death Location X:"+p.getLocation().getBlockX() + " Y: "+p.getLocation().getBlockY()+ " Z: "+p.getLocation().getBlockZ());
+
         e.setDeathMessage("§6"+p.getName() + " has just sadly passed away. :( \n F in the Chat.");
         p.sendMessage("§cYou died at X:"+p.getLocation().getBlockX() + " Y: "+p.getLocation().getBlockY()+ " Z: "+p.getLocation().getBlockZ());
+
     }
 
     @EventHandler

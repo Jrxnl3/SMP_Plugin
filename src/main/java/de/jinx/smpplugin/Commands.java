@@ -25,7 +25,7 @@ public class Commands implements CommandExecutor {
 
                 text += args[i].replace("&","§") + " ";
             }
-            Bukkit.broadcastMessage("§4 SERVER >> " + text);
+            Bukkit.broadcastMessage(SmpPlugin.PREFIX+ text);
 
         }else if(label.equalsIgnoreCase("rename")){
             if(player.getLevel() >= 1) {
@@ -43,8 +43,19 @@ public class Commands implements CommandExecutor {
                     player.sendMessage(SmpPlugin.PREFIX+"You dont have an Item your Main Hand!");
             }else
                 player.sendMessage(SmpPlugin.PREFIX +"§cYou dont have enough levels to rename!");
+        }else if(label.equalsIgnoreCase("testString")){
+            String text = "";
+
+            for (int i = 0; i < args.length; i++) {
+
+                text += args[i].replace("&","§") + " ";
+            }
+            player.sendMessage(text);
+
         }
         return false;
+
+
     }
 
     public String formateArgs(String[] argsToFormate){

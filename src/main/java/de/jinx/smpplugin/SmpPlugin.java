@@ -12,20 +12,21 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class SmpPlugin extends JavaPlugin {
 
     private static SmpPlugin plugin;
-    public static String PREFIX = "§5SMP §6Name >> ";
+    public static String PREFIX = "§2SM§aPain§6 >> §r";
 
     @Override
     public void onEnable() {
         plugin = this;
 
 
-        System.out.println("SMP Plugin has loaded!");
+        System.out.println("SMPain has loaded!");
         PluginManager pl = Bukkit.getPluginManager();
 
         pl.registerEvents(new Listeners(),this);
 
         this.getCommand("broadcast").setExecutor(new Commands());
         this.getCommand("rename").setExecutor(new Commands());
+        this.getCommand("testString").setExecutor(new Commands());
 
         FurnaceRecipe furnaceRecipe = new FurnaceRecipe(NamespacedKey.fromString("smpplugin"),new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH,1,20*30);
         SmokingRecipe leatherSmoker = new SmokingRecipe(NamespacedKey.fromString("smpplugin"),new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH,1,20*20);
