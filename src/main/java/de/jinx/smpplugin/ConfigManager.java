@@ -10,28 +10,33 @@ import java.io.IOException;
 public class ConfigManager {
 
 
-    File votingFile;
-    FileConfiguration votingCfg;
+    File endFile;
+    FileConfiguration endCfg;
 
 
     public ConfigManager() {
-        votingFile = new File(SmpPlugin.getPlugin().getDataFolder() + File.separator + "voting.yml");
-        votingCfg = YamlConfiguration.loadConfiguration(votingFile);
+        endFile = new File(SmpPlugin.getPlugin().getDataFolder() + File.separator + "end.yml");
+        endCfg = YamlConfiguration.loadConfiguration(endFile);
     }
 
-    public File getVotingFile() {
-        return votingFile;
+    public File getEndFile() {
+        return endFile;
     }
 
-    public FileConfiguration getVotingCfg() {
-        return votingCfg;
+    public FileConfiguration getEndCfg() {
+        return endCfg;
     }
 
-    public void saveVoting(){
+    public void reload(){
+        endFile = new File(SmpPlugin.getPlugin().getDataFolder() + File.separator + "end.yml");
+        endCfg = YamlConfiguration.loadConfiguration(endFile);
+    }
+
+    public void saveEnd(){
         try {
-            votingCfg.save(votingFile);
+            endCfg.save(endFile);
         } catch (IOException e) {
-            Bukkit.getServer().getConsoleSender().sendMessage(SmpPlugin.PREFIX + "§aCould not save" + votingFile.getName() + ".");
+            Bukkit.getServer().getConsoleSender().sendMessage(SmpPlugin.PREFIX + "§aCould not save" + endFile.getName() + ".");
         }
     }
 }
